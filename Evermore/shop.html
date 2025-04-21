@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Evermore Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Shop at Evermore Books</h1>
+        <nav>
+            <ul>
+                <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="Landing page.html">Discovery</a></li>
+        <li><a href="chart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Book Categories -->
+    <section id="categories">
+        <h2>Browse by Category</h2>
+        <ul>
+            <li><a href="#fiction">Romance</a></li>
+            <li><a href="#mystery">Mystery</a></li>
+            <li><a href="#scifi">Sci-Fi</a></li>
+			<li><a href="Fantasy">Fantasy</a></li>
+        </ul>
+    </section>
+
+    <!-- Books List -->
+    <section id="shop">
+        <h2>Available Books</h2>
+        <div class="book-list">
+            <!-- Existing Books -->
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 02_01_20 AM.png" alt="Whispers of the Forgotten">
+                <h3>Whispers of the Forgotten</h3>
+                <p>Author: James Bond</p>
+                <p>Price: £12.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 02_04_20 AM.png" alt="The Night's Labyrinth">
+                <h3>The Night's Labyrinth</h3>
+                <p>Author: Carline Kneir</p>
+                <p>Price: £15.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 02_08_03 AM.png" alt="Eclipsed Horizon">
+                <h3>Eclipsed Horizon</h3>
+                <p>Author: Kuliefe Jennier</p>
+                <p>Price: £10.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- New Books -->
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 01_39_39 AM.png" alt="Crimson Kingdom">
+                <h3>Crimson Kingdom</h3>
+                <p>Author: Lila Grace</p>
+                <p>Price: £13.50</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 01_44_10 AM.png" alt="Voices in the Fog">
+                <h3>Voices in the Fog</h3>
+                <p>Author: Daniel Brooks</p>
+                <p>Price: 14.75</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 01_47_04 AM.png" alt="Shadows of Solitude">
+                <h3>Shadows of Solitude</h3>
+                <p>Author: Julia Marlowe</p>
+                <p>Price: 11.25</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add New Book Form -->
+    <section id="add-book">
+        <h2>Add a New Book</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="book-title">Book Title:</label>
+            <input type="text" id="book-title" name="book-title" placeholder="Enter book name" required>
+
+            <label for="book-author">Author:</label>
+            <input type="text" id="book-author" name="book-author" placeholder="Enter author's name" required>
+
+            <label for="book-price">Price:</label>
+            <input type="number" id="book-price" name="book-price" step="0.01" placeholder="£0.00" required>
+
+            <label for="book-image">Book Image:</label>
+            <input type="file" id="book-image" name="book-image" accept="image/*" required>
+
+            <button type="submit">Add Book</button>
+        </form>
+    </section>
+
+    <!-- Back to Home -->
+    <section id="back">
+        <a href="index.html" class="btn">← Back to Home</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Evermore Books. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

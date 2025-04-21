@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up | Evermore Books</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Evermore Books</h1>
+    <nav>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href= "Landing page.html">Discovery</a></li>
+        <li><a href="chart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="login">
+    <h2>Create an Account</h2>
+    <p>Join Evermore Books and start your literary journey today.</p>
+
+    <form class="login-form">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+      <label for="confirm">Confirm Password:</label>
+      <input type="password" id="confirm" name="confirm" placeholder="Re-enter password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p style="text-align:center; margin-top: 20px;">
+      Already have an account?
+      <a href="login.html" style="color: #5a3e2b; font-weight: bold;">Log in here</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Evermore Books. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

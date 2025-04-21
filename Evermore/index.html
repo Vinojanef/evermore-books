@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evermore Books</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Import External Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lora:wght@400;700&family=Cormorant+Garamond:wght@400;700&display=swap');
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+
+        <h1>Evermore Books</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+				<a href= "Landing page.html">Discover</a>
+            <li><a href= "chart.html">Cart (<span id="cart-count">0</span>)</a></li> <!-- Cart Link -->
+				<a href="Login.html">Login</a>
+
+            </ul>
+        </nav>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" id="bookSearch" placeholder="Search for a book...">
+            <button onclick="searchBooks()">Search</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h2>Welcome to Evermore Books</h2>
+        <p>Discover your next great read with us!</p>
+        <a href="#shop" class="btn">Browse Books</a>
+    </section>
+
+    <!-- Featured Books -->
+    <section id="featured">
+        <h2>Featured Books</h2>
+        <div class="book-list">
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 02_01_20 AM.png" alt="Whispers of the Forgotten">
+                <h3>Whispers of the Forgotten</h3>
+                <p>James Bond</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src= "Images/ChatGPT Image Apr 20, 2025, 02_04_20 AM.png" alt="The Night's Labyrinth">
+                <h3>The Night's Labyrinth</h3>
+                <p>Carline Kneir</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="book">
+                <img src= "../ChatGPT Image Apr 20, 2025, 02_08_03 AM.png" alt="Eclipsed Horizon">
+                <h3>Eclipsed Horizon</h3>
+                <p>Kuliefe Jennier</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Evermore Books</h2>
+        <p>We are a passionate bookstore dedicated to providing a curated selection of books for every reader. Evermore Books was created for readers who crave stories that linger long after the final page. From vintage treasures to modern masterpieces, we bring together books that spark imagination and curiosity.</p>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Evermore Books. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" onclick="scrollToTop()">↑</button>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

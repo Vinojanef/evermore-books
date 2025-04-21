@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Evermore Books</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+
+    <header>
+        <h1>Your Shopping Cart</h1>
+        <nav>
+        
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href= "Landing page.html">Discovery</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="login.html">Login</a></li>
+
+            </ul>
+        </nav>
+    </header>
+<section id="cart">
+    <h2>Items in Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total-price">0.00</span></h3>
+    <button id="clear-cart">Clear Cart</button>
+</section>
+
+<script>
+    // Load cart from local storage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    function displayCart() {
+        let cartItems = document.getElementById("cart-items");
+        let totalPrice = document.getElementById("total-price");
+
+        cartItems.innerHTML = ""; // Clear previous content
+        let total = 0;
+
+        if (cart.length === 0) {
+            cartItems.innerHTML = "<p>Your cart is empty.</p>";
+        } else {
+            cart.forEach((book, index) => {
+                let item = document.createElement("div");
+                item.innerHTML = `<p>${book.title} - £${book.price} <button onclick="removeItem(${index})">Remove</button></p>`;
+                cartItems.appendChild(item);
+
+                total += parseFloat(book.price);
+            });
+        }
+
+        totalPrice.innerText = total.toFixed(2);
+    }
+
+    function removeItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+    }
+
+    document.getElementById("clear-cart").addEventListener("click", function() {
+        localStorage.removeItem("cart");
+        cart = [];
+        displayCart();
+    });
+
+    // Display cart on page load
+    displayCart();
+</script>
+
+</body>
+</html>
+
